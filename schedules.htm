@@ -1,0 +1,56 @@
+<a href="/assets/apps/timeline/">&lt;&lt; Back</a>
+<h1>{{title}}</h1>
+
+<h2>Add/Edit Project</h2>
+<form ng-submit="add()" class="form form-inline">
+	<small><label>Project Name: </label></small>
+	<input required type="text" ng-model="app.project" class="form-control">
+	<small><label>Developer: </label></small>
+	<input required type="text" ng-model="app.developer" class="form-control">
+	<small><label>Start Date: </label></small>
+	<input required type="date" ng-model="app.start_date" class="form-control">
+	<small><label>End Date: </label></small>
+	<input required type="date" ng-model="app.end_date" class="form-control">
+	<button class="btn btn-primary">Save</button>
+</form>
+<pre ng-show="debugging">{{ app | json }}</pre>
+
+<br><hr><br>
+
+<h2>Project Assignments</h2>
+<table class="table">
+	<thead>
+		<th>Project</th>
+		<th>Developer</th>
+		<th>Start Date</th>
+		<th>End Date</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="project in projects">
+			<td>
+				{{project.project}}
+				<pre ng-show="debugging">{{ project | json }}</pre>
+			</td>
+			<td>{{project.developer}}</td>
+			<td>{{project.start_date}}</td>
+			<td>{{project.end_date}}</td>
+			<td>
+				<button type="button" class="btn btn-sm" ng-click="edit(project)">Edit</button>
+				<button type="button" class="btn btn-sm" ng-click="delete(project)">Delete</button>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Chart</h2>
+<button type="button" ng-click="renderCharts()" class="btn btn-primary">Render</button>
+<div id="gantt-chart"></div>
+<div id="charts"></div>
+
+<br><hr><br>
+
+<h2>Clone to New Schedule</h2>
+<form ng-submit="clone()" class="form form-inline">
+	<input type="text" ng-model="clone_name" class="form-control">
+	<button class="btn btn-primary">Clone</button>
+</form>

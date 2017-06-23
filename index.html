@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<base href="/assets/apps/timeline/">
+		<title>AngularFire Scheduler</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+		<script src="https://www.gstatic.com/charts/loader.js"></script>
+		<style>
+			[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+				display: none !important;
+			}
+		</style>
+	</head>
+	<body ng-cloak ng-controller="MainController">
+		<main class="container">
+			<div ng-view></div>
+		</main>
+
+		<br><hr><br>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+		<script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+		<script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script>
+
+		<script src="index.js"></script>
+	</body>
+</html>

@@ -20,4 +20,4 @@ Used various libraries to build an app that lets people create schedules for pro
 
 ## Live Demo:
 
-[The demo can be found here.](http://stevensoule.com/dev/angularfire/app/)
+[A demo can be found here.](http://stevensoule.com/dev/angularfire/app/)

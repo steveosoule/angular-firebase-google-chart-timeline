@@ -1,4 +1,4 @@
-var FIREBASE_URL = 'https://projects-ac147.firebaseio.com/proservices/';
+var FIREBASE_URL = 'https://YOUR-FIREBASE-ID.firebaseio.com/YOUR-ENDPOINT/';
 
 var app = angular.module('app', ['ngRoute', 'firebase']);
 
@@ -232,11 +232,11 @@ app.controller('SchedulesController', function($scope, $route, $routeParams, $lo
 		value.start_date = !!value.start_date ? new Date(value.start_date) : '';
 		value.end_date = !!value.end_date ? new Date(value.end_date) : '';
 
-		$scope.app = value
+		$scope.app = value;
 	};
 
 	$scope.delete = function(item) {
-		$scope.projects.$remove(item)
+		$scope.projects.$remove(item);
 	};
 
 
